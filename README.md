@@ -1,5 +1,7 @@
 # Etag Interface
 
+[![Build Status](https://travis-ci.org/activecollab/etag.svg?branch=master)](https://travis-ci.org/activecollab/etag)
+
 Tag objects and collections using etag, and validate cached values. This package contains only the interface, so actual implementation needs to be implemented in libraries that use it.
 
 `ActiveCollab\Etag\EtagInterface` Interface says it all:
