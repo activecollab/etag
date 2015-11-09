@@ -15,7 +15,7 @@ class TaggableObject implements EtagInterface
     /**
      * Return true if this object can be tagged and cached on client side
      *
-     * @return bool|null
+     * @return boolean
      */
     public function canBeEtagged()
     {

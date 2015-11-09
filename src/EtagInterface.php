@@ -10,7 +10,7 @@ interface EtagInterface
     /**
      * Return true if this state of this object can be tagged and cached on client side.
      *
-     * @return bool|null
+     * @return boolean
      */
     public function canBeEtagged();
 
