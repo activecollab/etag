@@ -8,14 +8,17 @@ namespace ActiveCollab\Etag;
 interface EtagInterface
 {
     /**
-     * Return true if this object can be tagged and cached on client side
+     * Return true if this state of this object can be tagged and cached on client side.
      *
      * @return bool|null
      */
     public function canBeEtagged();
 
     /**
-     * Return etag
+     * Return etag.
+     *
+     * $visitor_identifier is a way that we identify a particular visitor (different people can use the same browsers
+     * under the same profile, and share the cache, so we need to address that).
      *
      * @param  string  $visitor_identifier
      * @param  boolean $use_cache
@@ -24,7 +27,10 @@ interface EtagInterface
     public function getEtag($visitor_identifier, $use_cache = true);
 
     /**
-     * Check if provided etag value match the current record
+     * Check if provided etag value matches the current object state.
+     *
+     * $visitor_identifier is a way that we identify a particular visitor (different people can use the same browsers
+     * under the same profile, and share the cache, so we need to address that).
      *
      * @param  string  $value
      * @param  string  $visitor_identifier
